@@ -19,15 +19,22 @@ public class MissionServiceImplTest {
 	IMissionService iMissionService;
 	
 	@Test
-	public void addMissionExterne() throws ParseException{
+	public void testAddMissionExterne() throws ParseException{
 		MissionExterne mission = new MissionExterne("Mission1","Lorem Ipsum","mission1@test.com",56);
 		iMissionService.addMission(mission);
 	}
 
 	@Test
-	public void addMission() throws ParseException{
-		Mission mission = new Mission("Mission2","Lorem Ipsum dolore ");
+	public void testAddMission() throws ParseException{
+		Mission mission = new Mission("Mission2","Lorem Ipsum dolore");
 		iMissionService.addMission(mission);
+	} 
+	
+	@Test
+	public void testDisplayMissions() throws ParseException{
+		iMissionService.getAllMissions();
 	}
+	
+
 
 }
