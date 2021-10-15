@@ -22,17 +22,16 @@ public class EntrepriseServiceImplTest {
 	@Autowired
 	IEntrepriseService IEntreprise;
 	private static final Logger L = LogManager.getLogger(EntrepriseServiceImplTest.class);
-	Entreprise entreprise = new Entreprise("Talan4", "raisonSocial" );
-	Entreprise entrepriseid = new Entreprise("testgetid", "raisonSocial2" );
+	Entreprise entreprise = new Entreprise("Entreprise", "raisonSocial" );
+	Entreprise entreprise2 = new Entreprise("entreprise2", "raisonSocial2" );
 
 	@Test
-	@Order(1)
 	public void testAjouterEntreprise()
 	{
 		try {
-			IEntreprise.ajouterEntreprise(entreprise);
-		L.info("Ajouter avec succes",entreprise.getId());
-		//IEntreprise.deleteEntrepriseById(entreprise.getId());
+			int id;
+			id=IEntreprise.ajouterEntreprise(entreprise);
+			L.info("Ajouter avec succes"+id);
 		}catch (Exception e) { L.error("Erreur dans testAjouterEntreprise() : " + e); }
 		
 	}
@@ -40,14 +39,18 @@ public class EntrepriseServiceImplTest {
 	public void testgetEntrepriseById()
 	{
 		try{
-		IEntreprise.ajouterEntreprise(entrepriseid);
-		IEntreprise.getEntrepriseById(entrepriseid.getId());
+			int id;
+		id=IEntreprise.ajouterEntreprise(entreprise2);
+		Entreprise e=IEntreprise.getEntrepriseById(id);
+		L.info("entreprise:"+ e);
 		}catch (Exception e) { L.error("Erreur dans testgetEntrepriseById() : " + e); }
 	}
 	@Test
-	@Order(2)
 	public void testdeleteEntrepriseById() {
-		IEntreprise.deleteEntrepriseById(entreprise.getId());
+		int id;
+		Entreprise entrepriseSupprimer = new Entreprise("supptal", "raisonSocial2" );
+		id=IEntreprise.ajouterEntreprise(entrepriseSupprimer);
+		IEntreprise.deleteEntrepriseById(id);
 	}
 
 
