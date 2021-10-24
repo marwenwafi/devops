@@ -26,11 +26,7 @@ public class MissionServiceImplTest {
 	@Autowired
 	MissionRepository missionRepository;
 	
-/*	@Test
 	public void testAddMissionExterne() throws ParseException{
-		MissionExterne mission = new MissionExterne("Mission1","Lorem Ipsum","mission1@test.com",56);
-		iMissionService.addMission(mission);
-		assertThat(mission.getName()).isEqualTo("Mission1");
 	}
 
 	@Test
