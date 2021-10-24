@@ -1,6 +1,7 @@
 package tn.esprit.spring.services;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import tn.esprit.spring.EntrepriseServiceImplTest;
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.repository.DepartementRepository;
@@ -30,6 +30,13 @@ public class MissionServiceImpl implements IMissionService {
 		List<Mission> missions= (List<Mission>) missionRepository.findAll();
 		logger.info("Mission's List :" + missions);
 		return missions;
+	}
+	
+	@Override
+	public void deleteMission(int Id) {
+		missionRepository.deleteById(Id);
+		logger.info("Mission deleted", Id);
+		
 	}
 
 	@Override
@@ -58,6 +65,39 @@ public class MissionServiceImpl implements IMissionService {
 		logger.info("Mission's by departments :" + missions);
 		
 		return missions;
+		
+	}
+
+	@Override
+	public void affectMissionToDepartement(int missionId, int depId) {
+		Mission mission = missionRepository.findById(missionId).get();
+		Departement dep = departementRepository.findById(depId).get();
+		mission.setDepartement(dep);
+		missionRepository.save(mission);
+		logger.info("Mission " + mission+" affected with success to department " + dep);
+
+		
+	}
+	
+	@Override
+	public Optional<Mission> getMissionById(int id) {
+    Optional<Mission> mission=missionRepository.findById(id);
+		return mission;
+	}
+
+	
+	
+	@Override
+	public void updateMissionName(int id, String name) {
+		Mission missionToUpdate = missionRepository.findById(id).orElse(null);
+        try{
+        	missionToUpdate.setName(name);
+        	missionRepository.save(missionToUpdate);
+            logger.info("Mission updated");}
+            catch (Exception e) {
+                logger.error("Error in update mission function  : " + e);
+
+        }
 		
 	}
 
