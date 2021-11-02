@@ -18,7 +18,7 @@ public class MissionServiceImplTest {
 	@Autowired
 	IMissionService iMissionService;
 	
-	/*@Test
+	@Test
 	public void testAddMissionExterne() throws ParseException{
 		MissionExterne mission = new MissionExterne("Mission1","Lorem Ipsum","mission1@test.com",56);
 		iMissionService.addMission(mission);
@@ -35,6 +35,6 @@ public class MissionServiceImplTest {
 		iMissionService.getAllMissions();
 	}
 	
-*/
+
 
 }
