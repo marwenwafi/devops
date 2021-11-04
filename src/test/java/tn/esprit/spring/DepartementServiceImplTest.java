@@ -2,8 +2,6 @@ package tn.esprit.spring;
 
 
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +14,8 @@ import tn.esprit.spring.entities.Role;
 import tn.esprit.spring.services.IEmployeService;
 import tn.esprit.spring.services.IEntrepriseService;
 import tn.esprit.spring.services.ITimesheetService;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class DepartementServiceImplTest {
