@@ -34,7 +34,7 @@ public class DepartementServiceImplTest {
 	@Test
 	public void testajouterDepartement() {
 		try {
-			Departement dept = new Departement("dep4");
+			Departement dept = new Departement("dep5");
 			entrepriseService.ajouterDepartement(dept);
 			loggerDepartement.info("Departement Ajouté : " + dept);
 		}
