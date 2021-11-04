@@ -1,4 +1,4 @@
-package tn.esprit.spring;
+/*package tn.esprit.spring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,9 +34,9 @@ public class MissionServiceImplTest {
 		Mission mission = new Mission("Mission2","Lorem Ipsum dolore");
 		iMissionService.addMission(mission);
 		assertThat(mission.getName()).isEqualTo("Mission2");
-	} */
+	} 
 	
-	/*	@Test
+		@Test
 	public void testDisplayMissions() throws ParseException{
 		
 		List<Mission> missions =  iMissionService.getAllMissions(); 
@@ -50,7 +50,7 @@ public class MissionServiceImplTest {
 		Optional<Mission> deletedMission = missionRepository.findById(2);
 		assertThat(deletedMission).isEmpty();
 		}
-	*/
+	
 	
 	@Test
 	public void testUpdateMission() throws ParseException {
@@ -61,4 +61,4 @@ public class MissionServiceImplTest {
 	
 	
 
-}
+}*/
