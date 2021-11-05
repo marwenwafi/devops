@@ -2093,3 +2093,4 @@ Verify the connector's configuration, identify and stop any process that's liste
 2021-11-05 01:36:17.034  INFO 13588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2021-11-05 01:36:17.275  WARN 13588 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2021-11-05 01:36:17.450  INFO 13588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2021-11-05 01:36:17.452  INFO 13588 --- [main] SpringBootCoreDataJpaMvcRest1Application : Started TimesheetSpringBootCoreDataJpaMvcRest1Application in 4.971 seconds (JVM running for 5.718)
