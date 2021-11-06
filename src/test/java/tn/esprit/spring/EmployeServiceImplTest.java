@@ -64,24 +64,16 @@ public class EmployeServiceImplTest {
         
 	}
 */
+	/*
 	@Test
 	public void testMettreAjourEmailByEmployeIdJPQL() throws ParseException {
 		String email = "ghadakhedrib@gmail.com";
 	    int employeId = 2;
 		employeService.mettreAjourEmailByEmployeIdJPQL(email, employeId);
 		assertEquals(employeRepository.findById(employeId).get().getEmail(), email);
-	}
+	}*/
 	
-@Test
-	public void testAffectEmployeDepartment() throws ParseException {
-		int employeId = 2;
-	    int departementId = 1;
-	    employeService.affecterEmployeADepartement(employeId, departementId);
-	    assertTrue(employeRepository.findById(employeId).isPresent() && departementRepository.findById(departementId).isPresent());
-	   
-		
-		
-	}
+	/*
 	
 
 	@Test
@@ -91,7 +83,7 @@ public class EmployeServiceImplTest {
 		employeService.desaffecterEmployeDuDepartement(employeId, departementId);
 		assertThat(employeRepository.findById(employeId).get()).isNotNull();
 		assertThat(departementRepository.findById(departementId).get()).isNotNull();
-	}
+	}*/
 
 	@Test
 	public void testAjouterContrat() throws ParseException {
@@ -111,13 +103,14 @@ public class EmployeServiceImplTest {
 	        assertEquals(contrat.getEmploye().getId(),employeId);
 	}
 */
+	/*
 	@Test
 	public void testGetEmployePrenomById() throws ParseException {
 		 int employeId = 2;
 		String prenom =employeService.getEmployePrenomById(employeId);
 	        Employe employe = employeRepository.findById(employeId).get();
 	        assertEquals(employe.getPrenom(), prenom);
-	} 
+	} */
 	/*
 	@Test
 	public void testDeleteEmployeById() throws ParseException {
@@ -155,10 +148,12 @@ public class EmployeServiceImplTest {
 		Double salaireMoyen=employeService.getSalaireMoyenByDepartementId(departementId);
 		assertNotEquals(salaireMoyen, 0.0);
 	}
+	
+	/*
 	@Test
 	public void testGetAllEmployeNamesJPQL() throws ParseException {
 		List<String> names = employeService.getAllEmployeNamesJPQL();
 		assertThat(names.get(0)).isEqualTo("Ghada");
-	}
+	}*/
 	
 }
