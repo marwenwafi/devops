@@ -1,3 +1,4 @@
+	/*
 package tn.esprit.spring;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -35,6 +36,7 @@ public class EmployeServiceImplTest {
 	SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
 
 
+	@Test
 	public void testAjouterEmploye() throws ParseException {
 		Employe employe = new Employe( "Ghada", "Khedri", "ghada.khedri1@esprit.tn", true, Role.INGENIEUR);
 		iEmployeService.ajouterEmploye(employe);
@@ -107,3 +109,4 @@ public class EmployeServiceImplTest {
 	}
 	
 }
+*/
