@@ -3080,6 +3080,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.NativeSession.connect(NativeSession.java:165) ~[mysql-connector-java-8.0.15.jar:8.0.15]
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.15.jar:8.0.15]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+<<<<<<< HEAD
 	... 73 common frames omitted
 Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
 	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67) ~[mysql-connector-java-8.0.15.jar:8.0.15]
@@ -3087,6 +3088,300 @@ Caused by: java.io.EOFException: Can not read response from server. Expected to 
 	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45) ~[mysql-connector-java-8.0.15.jar:8.0.15]
 	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556) ~[mysql-connector-java-8.0.15.jar:8.0.15]
 	... 79 common frames omitted
+=======
+	... 75 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_05]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_05]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[na:1.8.0_05]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_05]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_05]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_05]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_05]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_05]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 78 common frames omitted
+
+2021-11-06 21:21:55.214  INFO 8240 --- [main] tn.esprit.spring.EmployeServiceImplTest  : Starting EmployeServiceImplTest on LAPTOP-IKTGGHID with PID 8240 (started by Firas in C:\Users\Firas\Documents\workspace-spring-tool-suite-4-4.12.0.RELEASE\devops)
+2021-11-06 21:21:55.214  INFO 8240 --- [main] tn.esprit.spring.EmployeServiceImplTest  : No active profile set, falling back to default profiles: default
+2021-11-06 21:21:55.351  INFO 8240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-06 21:21:55.372  INFO 8240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 6 repository interfaces.
+2021-11-06 21:21:55.424  INFO 8240 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$abe4422b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-06 21:21:55.483  INFO 8240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2021-11-06 21:21:55.537  INFO 8240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2021-11-06 21:21:55.561  INFO 8240 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-11-06 21:21:55.567  INFO 8240 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-06 21:21:55.818  INFO 8240 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-06 21:21:56.204  INFO 8240 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-06 21:21:57.230  INFO 8240 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-06 21:21:57.281  WARN 8240 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-06 21:21:57.702  INFO 8240 --- [main] tn.esprit.spring.EmployeServiceImplTest  : Started EmployeServiceImplTest in 2.505 seconds (JVM running for 259.433)
+2021-11-06 21:21:57.991  INFO 8240 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [tn.esprit.spring.EntrepriseServiceImplTest], using SpringBootContextLoader
+2021-11-06 21:21:57.991  INFO 8240 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [tn.esprit.spring.EntrepriseServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-11-06 21:21:57.992  INFO 8240 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tn.esprit.spring.EntrepriseServiceImplTest]: EntrepriseServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-11-06 21:21:57.994  INFO 8240 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application for test class tn.esprit.spring.EntrepriseServiceImplTest
+2021-11-06 21:21:57.996  INFO 8240 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-11-06 21:21:57.996  INFO 8240 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2da8cbb9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@9a99c10, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@75c3957d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5c781425, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3766f910, org.springframework.test.context.transaction.TransactionalTestExecutionListener@726aaaf0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1b6bb1bd, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7ae57c9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7008055, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@201a976f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@66ba2c88, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@13df2f89]
+2021-11-06 21:21:58.033  INFO 8240 --- [main] t.e.spring.EntrepriseServiceImplTest     : entreprise : Entreprise [id=20, name=entreprise2, raisonSocial=raisonSocial2, departements=[]]
+2021-11-06 21:21:58.037  INFO 8240 --- [main] t.e.spring.EntrepriseServiceImplTest     : Ajouter avec succes21
+2021-11-06 21:21:58.040  INFO 8240 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [tn.esprit.spring.MissionServiceImplTest], using SpringBootContextLoader
+2021-11-06 21:21:58.041  INFO 8240 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [tn.esprit.spring.MissionServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-11-06 21:21:58.041  INFO 8240 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tn.esprit.spring.MissionServiceImplTest]: MissionServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-11-06 21:21:58.044  INFO 8240 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application for test class tn.esprit.spring.MissionServiceImplTest
+2021-11-06 21:21:58.045  INFO 8240 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-11-06 21:21:58.046  INFO 8240 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d2fc711, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@a741f59, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@232fc6a6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3e6046fb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3d741969, org.springframework.test.context.transaction.TransactionalTestExecutionListener@17504749, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4a17b9f3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@767c69d4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6b5e9923, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7e21f10e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@98e0718, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1ca9fd34]
+2021-11-06 21:21:58.053  INFO 8240 --- [main] t.e.s.services.TimesheetServiceImpl      : success
+2021-11-06 21:21:58.133  INFO 8240 --- [main] t.e.s.services.TimesheetServiceImpl      : Mission updated
+2021-11-06 21:21:58.150  INFO 8240 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-06 21:21:58.152  INFO 8240 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-06 21:21:58.153  INFO 8240 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2021-11-06 21:21:58.160  INFO 8240 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2021-11-06 21:22:08.854  INFO 5152 --- [main] SpringBootCoreDataJpaMvcRest1Application : Starting TimesheetSpringBootCoreDataJpaMvcRest1Application on LAPTOP-IKTGGHID with PID 5152 (C:\Users\Firas\Documents\workspace-spring-tool-suite-4-4.12.0.RELEASE\devops\target\classes started by Firas in C:\Users\Firas\Documents\workspace-spring-tool-suite-4-4.12.0.RELEASE\devops)
+2021-11-06 21:22:08.856  INFO 5152 --- [main] SpringBootCoreDataJpaMvcRest1Application : No active profile set, falling back to default profiles: default
+2021-11-06 21:22:09.390  INFO 5152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-06 21:22:09.455  INFO 5152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 6 repository interfaces.
+2021-11-06 21:22:09.683  INFO 5152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3fdb3db5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-06 21:22:09.988  INFO 5152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8089 (http)
+2021-11-06 21:22:10.008  INFO 5152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-06 21:22:10.008  INFO 5152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2021-11-06 21:22:10.095  INFO 5152 --- [main] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-11-06 21:22:10.095  INFO 5152 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1209 ms
+2021-11-06 21:22:10.205  INFO 5152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-06 21:22:10.534  INFO 5152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-06 21:22:10.573  INFO 5152 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-11-06 21:22:10.624  INFO 5152 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-06 21:22:10.625  INFO 5152 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-06 21:22:10.744  INFO 5152 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-06 21:22:10.870  INFO 5152 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-06 21:22:11.689  INFO 5152 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-06 21:22:11.969  INFO 5152 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-06 21:22:12.315  INFO 5152 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-06 21:22:12.528  WARN 5152 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-06 21:22:12.691  INFO 5152 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-11-06 21:22:12.707  INFO 5152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8089 (http) with context path '/SpringMVC'
+2021-11-06 21:22:12.709  INFO 5152 --- [main] SpringBootCoreDataJpaMvcRest1Application : Started TimesheetSpringBootCoreDataJpaMvcRest1Application in 4.112 seconds (JVM running for 4.692)
+2021-11-06 21:22:12.710  INFO 5152 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-06 21:22:12.712  INFO 5152 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-06 21:22:12.715  INFO 5152 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-06 21:22:12.720  INFO 5152 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-06 21:22:31.703  INFO 27164 --- [main] tn.esprit.spring.ContartServiceTest      : Starting ContartServiceTest on LAPTOP-IKTGGHID with PID 27164 (started by Firas in C:\Users\Firas\Documents\workspace-spring-tool-suite-4-4.12.0.RELEASE\devops)
+2021-11-06 21:22:31.704  INFO 27164 --- [main] tn.esprit.spring.ContartServiceTest      : No active profile set, falling back to default profiles: default
+2021-11-06 21:22:32.605  INFO 27164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-06 21:22:32.710  INFO 27164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95ms. Found 6 repository interfaces.
+2021-11-06 21:22:33.179  INFO 27164 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$abe4422b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-06 21:22:33.501  INFO 27164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-06 21:22:33.823  INFO 27164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-06 21:22:33.880  INFO 27164 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-11-06 21:22:33.941  INFO 27164 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-06 21:22:33.944  INFO 27164 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-06 21:22:34.094  INFO 27164 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-06 21:22:34.423  INFO 27164 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-06 21:22:35.422  INFO 27164 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-06 21:22:35.834  INFO 27164 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-06 21:22:36.765  INFO 27164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-06 21:22:36.835  WARN 27164 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-06 21:22:37.204  INFO 27164 --- [main] tn.esprit.spring.ContartServiceTest      : Started ContartServiceTest in 5.772 seconds (JVM running for 6.578)
+2021-11-06 21:22:37.340  INFO 27164 --- [main] tn.esprit.spring.ContartServiceTest      : ajouterContrat : tn.esprit.spring.entities.Contrat@2b6fcca1
+2021-11-06 21:22:37.366  INFO 27164 --- [main] tn.esprit.spring.ContartServiceTest      : deleteAllContratJPQL 
+2021-11-06 21:22:37.397  INFO 27164 --- [main] tn.esprit.spring.ContartServiceTest      : deleteContratById : tn.esprit.spring.entities.Contrat@6fa2a006
+2021-11-06 21:22:37.424 ERROR 27164 --- [main] tn.esprit.spring.ContartServiceTest      : Erreur affecterContratAEmploye : Contrat : tn.esprit.spring.entities.Contrat@79d14037 Employe : tn.esprit.spring.entities.Employe@6c1e40d9
+2021-11-06 21:22:37.428  INFO 27164 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [tn.esprit.spring.DepartementServiceImplTest], using SpringBootContextLoader
+2021-11-06 21:22:37.429  INFO 27164 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [tn.esprit.spring.DepartementServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-11-06 21:22:37.429  INFO 27164 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tn.esprit.spring.DepartementServiceImplTest]: DepartementServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-11-06 21:22:37.432  INFO 27164 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application for test class tn.esprit.spring.DepartementServiceImplTest
+2021-11-06 21:22:37.434  INFO 27164 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-11-06 21:22:37.434  INFO 27164 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6f52a229, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3fe98084, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5f33e6d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@151a6598, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6fa3def8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c3d9e28, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@a1cb94, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@46d148bd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37f41a81, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@47c81e89, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@49bb808f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@563ada5]
+2021-11-06 21:22:37.459 ERROR 27164 --- [main] t.e.spring.DepartementServiceImplTest    : java.util.NoSuchElementException: No value present
+
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[na:1.8.0_05]
+	at tn.esprit.spring.services.TimesheetServiceImpl.affecterMissionADepartement(TimesheetServiceImpl.java:41) ~[classes/:na]
+	at tn.esprit.spring.DepartementServiceImplTest.testaffecterMissionADepartement(DepartementServiceImplTest.java:110) ~[test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_05]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_05]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_05]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_05]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+
+2021-11-06 21:22:37.470 ERROR 27164 --- [main] t.e.spring.DepartementServiceImplTest    : java.lang.NullPointerException
+
+java.lang.NullPointerException: null
+	at tn.esprit.spring.services.EmployeServiceImpl.affecterEmployeADepartement(EmployeServiceImpl.java:59) ~[classes/:na]
+	at tn.esprit.spring.services.EmployeServiceImpl$$FastClassBySpringCGLIB$$b0fddcac.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$707/1645578641.proceedWithInvocation(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at tn.esprit.spring.services.EmployeServiceImpl$$EnhancerBySpringCGLIB$$3d61d129.affecterEmployeADepartement(<generated>) ~[classes/:na]
+	at tn.esprit.spring.DepartementServiceImplTest.testaffecterEmployeADepartement(DepartementServiceImplTest.java:80) ~[test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_05]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_05]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_05]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_05]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+
+2021-11-06 21:22:37.531  INFO 27164 --- [main] t.e.spring.DepartementServiceImplTest    : Departement Ajout� : tn.esprit.spring.entities.Departement@7402c49f
+2021-11-06 21:22:37.550 ERROR 27164 --- [main] t.e.spring.DepartementServiceImplTest    : java.util.NoSuchElementException: No value present
+
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[na:1.8.0_05]
+	at tn.esprit.spring.services.EntrepriseServiceImpl.deleteDepartementById(EntrepriseServiceImpl.java:59) ~[classes/:na]
+	at tn.esprit.spring.services.EntrepriseServiceImpl$$FastClassBySpringCGLIB$$f018a7cc.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$707/1645578641.proceedWithInvocation(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at tn.esprit.spring.services.EntrepriseServiceImpl$$EnhancerBySpringCGLIB$$3ba2689.deleteDepartementById(<generated>) ~[classes/:na]
+	at tn.esprit.spring.DepartementServiceImplTest.testdeleteDepartementById(DepartementServiceImplTest.java:49) ~[test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_05]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_05]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_05]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_05]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+
+2021-11-06 21:22:37.562 ERROR 27164 --- [main] t.e.spring.DepartementServiceImplTest    : java.util.NoSuchElementException: No value present
+
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[na:1.8.0_05]
+	at tn.esprit.spring.services.EntrepriseServiceImpl.affecterDepartementAEntreprise(EntrepriseServiceImpl.java:35) ~[classes/:na]
+	at tn.esprit.spring.services.EntrepriseServiceImpl$$FastClassBySpringCGLIB$$f018a7cc.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at tn.esprit.spring.services.EntrepriseServiceImpl$$EnhancerBySpringCGLIB$$3ba2689.affecterDepartementAEntreprise(<generated>) ~[classes/:na]
+	at tn.esprit.spring.DepartementServiceImplTest.testaffecterDepartementAEntreprise(DepartementServiceImplTest.java:60) ~[test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_05]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_05]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_05]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_05]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+>>>>>>> 99c06f305cd363a8de8ff0a1e97a2bf5f7accd8b
 
 2021-11-07 01:51:51.519  INFO 5496 --- [main] tn.esprit.spring.EmployeServiceImplTest  : Starting EmployeServiceImplTest on LAPTOP-IKTGGHID with PID 5496 (started by Firas in C:\Users\Firas\Documents\workspace-spring-tool-suite-4-4.12.0.RELEASE\devops)
 2021-11-07 01:51:51.520  INFO 5496 --- [main] tn.esprit.spring.EmployeServiceImplTest  : No active profile set, falling back to default profiles: default
@@ -3098,6 +3393,7 @@ Caused by: java.io.EOFException: Can not read response from server. Expected to 
 2021-11-07 01:51:53.632  INFO 5496 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
+<<<<<<< HEAD
 2021-11-07 01:51:53.700  INFO 5496 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
 2021-11-07 01:51:53.702  INFO 5496 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
 2021-11-07 01:51:53.846  INFO 5496 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
@@ -3111,3 +3407,234 @@ Caused by: java.io.EOFException: Can not read response from server. Expected to 
 2021-11-07 01:51:58.096  INFO 5496 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-11-07 01:51:58.100  INFO 5496 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-11-07 01:51:58.106  INFO 5496 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+=======
+2021-11-06 21:28:35.824  INFO 18012 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2021-11-06 21:28:35.825  INFO 18012 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-11-06 21:28:35.982  INFO 18012 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-11-06 21:28:36.315  INFO 18012 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-06 21:28:37.315  INFO 18012 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-06 21:28:37.700  INFO 18012 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-11-06 21:28:38.704  INFO 18012 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-06 21:28:38.774  WARN 18012 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-06 21:28:39.173  INFO 18012 --- [main] tn.esprit.spring.ContartServiceTest      : Started ContartServiceTest in 5.817 seconds (JVM running for 6.614)
+2021-11-06 21:28:39.327  INFO 18012 --- [main] tn.esprit.spring.ContartServiceTest      : ajouterContrat : tn.esprit.spring.entities.Contrat@4392362c
+2021-11-06 21:28:39.352  INFO 18012 --- [main] tn.esprit.spring.ContartServiceTest      : deleteAllContratJPQL 
+2021-11-06 21:28:39.378  INFO 18012 --- [main] tn.esprit.spring.ContartServiceTest      : deleteContratById : tn.esprit.spring.entities.Contrat@39695803
+2021-11-06 21:28:39.398 ERROR 18012 --- [main] tn.esprit.spring.ContartServiceTest      : Erreur affecterContratAEmploye : Contrat : tn.esprit.spring.entities.Contrat@5dacf18d Employe : tn.esprit.spring.entities.Employe@432a6a69
+2021-11-06 21:28:39.404  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [tn.esprit.spring.DepartementServiceImplTest], using SpringBootContextLoader
+2021-11-06 21:28:39.405  INFO 18012 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [tn.esprit.spring.DepartementServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-11-06 21:28:39.405  INFO 18012 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tn.esprit.spring.DepartementServiceImplTest]: DepartementServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-11-06 21:28:39.408  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application for test class tn.esprit.spring.DepartementServiceImplTest
+2021-11-06 21:28:39.409  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-11-06 21:28:39.410  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6fa3def8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1c3d9e28, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@a1cb94, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@46d148bd, org.springframework.test.context.support.DirtiesContextTestExecutionListener@37f41a81, org.springframework.test.context.transaction.TransactionalTestExecutionListener@47c81e89, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@49bb808f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@563ada5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@12548f9a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@156ff70f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@c5a2d5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@185339ed]
+2021-11-06 21:28:39.430 ERROR 18012 --- [main] t.e.spring.DepartementServiceImplTest    : java.util.NoSuchElementException: No value present
+
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[na:1.8.0_05]
+	at tn.esprit.spring.services.TimesheetServiceImpl.affecterMissionADepartement(TimesheetServiceImpl.java:41) ~[classes/:na]
+	at tn.esprit.spring.DepartementServiceImplTest.testaffecterMissionADepartement(DepartementServiceImplTest.java:110) ~[test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_05]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_05]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_05]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_05]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+
+2021-11-06 21:28:39.443 ERROR 18012 --- [main] t.e.spring.DepartementServiceImplTest    : java.lang.NullPointerException
+
+java.lang.NullPointerException: null
+	at tn.esprit.spring.services.EmployeServiceImpl.affecterEmployeADepartement(EmployeServiceImpl.java:59) ~[classes/:na]
+	at tn.esprit.spring.services.EmployeServiceImpl$$FastClassBySpringCGLIB$$b0fddcac.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$707/1485944773.proceedWithInvocation(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at tn.esprit.spring.services.EmployeServiceImpl$$EnhancerBySpringCGLIB$$c891c20d.affecterEmployeADepartement(<generated>) ~[classes/:na]
+	at tn.esprit.spring.DepartementServiceImplTest.testaffecterEmployeADepartement(DepartementServiceImplTest.java:80) ~[test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_05]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_05]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_05]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_05]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+
+2021-11-06 21:28:39.495  INFO 18012 --- [main] t.e.spring.DepartementServiceImplTest    : Departement Ajout� : tn.esprit.spring.entities.Departement@3f1d6a13
+2021-11-06 21:28:39.508 ERROR 18012 --- [main] t.e.spring.DepartementServiceImplTest    : java.util.NoSuchElementException: No value present
+
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[na:1.8.0_05]
+	at tn.esprit.spring.services.EntrepriseServiceImpl.deleteDepartementById(EntrepriseServiceImpl.java:59) ~[classes/:na]
+	at tn.esprit.spring.services.EntrepriseServiceImpl$$FastClassBySpringCGLIB$$f018a7cc.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$707/1485944773.proceedWithInvocation(Unknown Source) ~[na:na]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at tn.esprit.spring.services.EntrepriseServiceImpl$$EnhancerBySpringCGLIB$$8eea176d.deleteDepartementById(<generated>) ~[classes/:na]
+	at tn.esprit.spring.DepartementServiceImplTest.testdeleteDepartementById(DepartementServiceImplTest.java:49) ~[test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_05]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_05]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_05]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_05]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+
+2021-11-06 21:28:39.522 ERROR 18012 --- [main] t.e.spring.DepartementServiceImplTest    : java.util.NoSuchElementException: No value present
+
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[na:1.8.0_05]
+	at tn.esprit.spring.services.EntrepriseServiceImpl.affecterDepartementAEntreprise(EntrepriseServiceImpl.java:35) ~[classes/:na]
+	at tn.esprit.spring.services.EntrepriseServiceImpl$$FastClassBySpringCGLIB$$f018a7cc.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684) ~[spring-aop-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at tn.esprit.spring.services.EntrepriseServiceImpl$$EnhancerBySpringCGLIB$$8eea176d.affecterDepartementAEntreprise(<generated>) ~[classes/:na]
+	at tn.esprit.spring.DepartementServiceImplTest.testaffecterDepartementAEntreprise(DepartementServiceImplTest.java:60) ~[test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_05]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_05]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_05]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_05]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159) [surefire-junit4-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) [surefire-booter-2.22.1.jar:2.22.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) [surefire-booter-2.22.1.jar:2.22.1]
+
+2021-11-06 21:28:39.548  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [tn.esprit.spring.EmployeServiceImplTest], using SpringBootContextLoader
+2021-11-06 21:28:39.549  INFO 18012 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [tn.esprit.spring.EmployeServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-11-06 21:28:39.549  INFO 18012 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tn.esprit.spring.EmployeServiceImplTest]: EmployeServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-11-06 21:28:39.553  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application for test class tn.esprit.spring.EmployeServiceImplTest
+2021-11-06 21:28:39.555  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-11-06 21:28:39.555  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@369a95a5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@543da15, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@69d7bc1a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@cb318ac, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e668322, org.springframework.test.context.transaction.TransactionalTestExecutionListener@75ee6f89, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@210d3a42, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@356f20b7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6f4adaab, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@69de72ec, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@21c99abf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6d6f6ca9]
+2021-11-06 21:28:39.658  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [tn.esprit.spring.EntrepriseServiceImplTest], using SpringBootContextLoader
+2021-11-06 21:28:39.658  INFO 18012 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [tn.esprit.spring.EntrepriseServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-11-06 21:28:39.659  INFO 18012 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tn.esprit.spring.EntrepriseServiceImplTest]: EntrepriseServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-11-06 21:28:39.661  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application for test class tn.esprit.spring.EntrepriseServiceImplTest
+2021-11-06 21:28:39.663  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-11-06 21:28:39.663  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3c8fe8ad, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43d6262c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5e2975ca, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@38cf4497, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7b4619a3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@9d3a7a1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1c411474, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5e681097, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@152891f8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1d2c253, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@15a484a9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@b56c222]
+2021-11-06 21:28:39.696  INFO 18012 --- [main] t.e.spring.EntrepriseServiceImplTest     : entreprise : Entreprise [id=29, name=entreprise2, raisonSocial=raisonSocial2, departements=[]]
+2021-11-06 21:28:39.701  INFO 18012 --- [main] t.e.spring.EntrepriseServiceImplTest     : Ajouter avec succes30
+2021-11-06 21:28:39.703  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [tn.esprit.spring.MissionServiceImplTest], using SpringBootContextLoader
+2021-11-06 21:28:39.703  INFO 18012 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [tn.esprit.spring.MissionServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-11-06 21:28:39.704  INFO 18012 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tn.esprit.spring.MissionServiceImplTest]: MissionServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-11-06 21:28:39.705  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tn.esprit.spring.TimesheetSpringBootCoreDataJpaMvcRest1Application for test class tn.esprit.spring.MissionServiceImplTest
+2021-11-06 21:28:39.707  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-11-06 21:28:39.707  INFO 18012 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6ffc6ea7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2c5708e7, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4ffa078d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4e26564d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@42238078, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5627b8eb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@49fe0bcd, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3516b881, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6be8ce1b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@e3c36d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@397a10df, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@39a865c1]
+2021-11-06 21:28:39.714  INFO 18012 --- [main] t.e.s.services.TimesheetServiceImpl      : success
+2021-11-06 21:28:39.781  INFO 18012 --- [main] t.e.s.services.TimesheetServiceImpl      : Mission updated
+2021-11-06 21:28:39.798  INFO 18012 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-06 21:28:39.801  INFO 18012 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-06 21:28:39.804  INFO 18012 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-06 21:28:39.807  INFO 18012 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+>>>>>>> 99c06f305cd363a8de8ff0a1e97a2bf5f7accd8b
