@@ -13,6 +13,7 @@ services:
   app:  
     container_name: timesheet
     image: "marwenwafi1/timesheet"
+    restart: unless-stopped
     depends_on:
       - mysqldb
     ports:
