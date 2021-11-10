@@ -11,51 +11,58 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.entities.Role;
 import tn.esprit.spring.services.EmployeServiceImpl;
+import tn.esprit.spring.services.IEmployeService;
+import tn.esprit.spring.services.IEntrepriseService;
 import tn.esprit.spring.services.ITimesheetService;
 
 @RunWith(SpringRunner.class)
-@ActiveProfiles("test")
+@ActiveProfiles("dev")
 @SpringBootTest
 public class TimeSheetTest {
-	
+
 	@Autowired
 	ITimesheetService it;
 	@Autowired
-	EmployeServiceImpl iEmployeService;
-	
+	IEmployeService iEmployeService;
+	@Autowired
+	IEntrepriseService iEntrepriseService;
+
 	private static final Logger LOGGER = LogManager.getLogger(TimeSheetTest.class);
-	
+
 	@Test
-	public void testAjouterTimesheet()
-	{
+	public void testAjouterTimesheet() {
 		int idemp, idmiss;
-		Employe employe = new Employe( "Marwen", "dhawedi", "marwen.dhawedi1@esprit.tn", true, Role.INGENIEUR);
-		try
-		{
-		idemp = iEmployeService.ajouterEmploye(employe);
-		Mission mission = new Mission("Mission1","Lorem Ipsum");
-		idmiss = it.ajouterMission(mission);
-		it.ajouterTimesheet(idmiss, idemp, new Date(),new Date());
-		LOGGER.info("Added successfully with");
+		Employe employe = new Employe("Marwen", "dhawedi", "marwen.dhawedi1@esprit.tn", true, Role.INGENIEUR);
+		try {
+			idemp = iEmployeService.ajouterEmploye(employe);
+			Mission mission = new Mission("Mission1", "Lorem Ipsum");
+			idmiss = it.ajouterMission(mission);
+			it.ajouterTimesheet(idmiss, idemp, new Date(), new Date());
+			LOGGER.info("Added successfully with");
+		} catch (Exception e) {
+			LOGGER.error("Problem encountred : " + e);
 		}
-		catch (Exception e) { LOGGER.error("Problem encountred : " + e); }
-		
+
 	}
-	
+
 	@Test
-	public void testValiderTimesheet()
-	{
+	public void testValiderTimesheet() {
 		int idemp, idmiss;
-		Employe employe = new Employe( "Chef", "dhawedi12", "marwen.dhawedi1@esprit.tn", true, Role.CHEF_DEPARTEMENT);
+		Employe employe = new Employe("Chef", "dhawedi12", "marwen.dhawedi1@esprit.tn", true, Role.CHEF_DEPARTEMENT);
 		idemp = iEmployeService.ajouterEmploye(employe);
-		Mission mission = new Mission("Mission111","Lorem Ipsum");
+		Mission mission = new Mission("Mission111", "Lorem Ipsum");
 		idmiss = it.ajouterMission(mission);
-		it.ajouterTimesheet(idmiss, idemp, new Date(),new Date());
-		it.validerTimesheet(idmiss, idemp, new Date(),new Date(), idemp);
+		Departement dep = new Departement("info");
+		int idDep = iEntrepriseService.ajouterDepartement(dep);
+		it.affecterMissionADepartement(idmiss, idDep);
+		iEmployeService.affecterEmployeADepartement(idemp, idDep);
+		it.ajouterTimesheet(idmiss, idemp, new Date(), new Date());
+		it.validerTimesheet(idmiss, idemp, new Date(), new Date(), idemp);
 	}
 
 }

@@ -67,8 +67,8 @@ public class TimesheetServiceImpl implements ITimesheetService {
 
 	public void validerTimesheet(int missionId, int employeId, Date dateDebut, Date dateFin, int validateurId) {
 		LOGGER.info("In valider Timesheet");
-		Employe validateur = employeRepository.findById(validateurId).orElse(null);
-		Mission mission = missionRepository.findById(missionId).orElse(null);
+		Employe validateur = employeRepository.findById(validateurId).get();
+		Mission mission = missionRepository.findById(missionId).get();
 		// verifier s'il est un chef de departement (interet des enum)
 		try {
 			if (!validateur.getRole().equals(Role.CHEF_DEPARTEMENT)) {
@@ -84,6 +84,7 @@ public class TimesheetServiceImpl implements ITimesheetService {
 			for (Departement dep : validateur.getDepartements()) {
 				if (dep.getId() == mission.getDepartement().getId()) {
 					chefDeLaMission = true;
+					LOGGER.info("He is a chef? "+chefDeLaMission);
 					break;
 				}
 			}
@@ -98,6 +99,7 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		TimesheetPK timesheetPK = new TimesheetPK(missionId, employeId, dateDebut, dateFin);
 		Timesheet timesheet = timesheetRepository.findBytimesheetPK(timesheetPK);
 		timesheet.setValide(true);
+		timesheetRepository.save(timesheet);
 
 		// Comment Lire une date de la base de données
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
